@@ -1,14 +1,17 @@
-import { View, Text, StyleSheet} from "react-native"
+import { View, StyleSheet} from "react-native"
+import { Link } from 'expo-router'
 
 export default function Index(){
   return(
     <View style={styles.constainer}>
-      <Text style={styles.title}>Entrar</Text>
+      <Link href="/sign-up" style={styles.new}>
+         Criar conta
+       </Link>
     </View>
   )
 }
 
 const styles = StyleSheet.create({
   constainer: { flex: 1, justifyContent: "center", alignItems: "center" },
-  title: {fontSize: 22, fontWeight: "bold" }
+  new: {fontSize: 16, fontWeight: "bold" }
 })
