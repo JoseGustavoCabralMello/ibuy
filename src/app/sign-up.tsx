@@ -1,7 +1,9 @@
 import { Alert, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
-import { router } from 'expo-router'
+import { router, useLocalSearchParams } from 'expo-router'
  
  export default function SingUp() {
+  const { id, name } = useLocalSearchParams()
+
   function back() {
     if (!router.canGoBack()) {
       return Alert.alert('Não é possível voltar!')
@@ -13,6 +15,10 @@ import { router } from 'expo-router'
 
    return (
      <View style={styles.container}>
+      <Text style={styles.title}>
+        {id} - {name}
+      </Text>
+
        <TouchableOpacity onPress={back}>
         <Text style={styles.back}>
           Voltar
@@ -23,6 +29,16 @@ import { router } from 'expo-router'
  }
  
  const styles = StyleSheet.create({
-   container: { flex: 1, justifyContent: 'center', alignItems: 'center' },
-   back: { fontSize: 16, fontWeight: 'bold' },
+   container: { 
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+   back: { 
+    fontSize: 16,
+    fontWeight: 'bold'
+  },
+   title: {
+    fontSize: 22,
+  },
  })
