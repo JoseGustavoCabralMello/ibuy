@@ -1,5 +1,5 @@
 import { View, StyleSheet, TouchableOpacity, Text} from "react-native"
-import { Link, router } from 'expo-router'
+import { router } from 'expo-router'
 
 export default function Index(){
   function signUp() {
@@ -11,8 +11,6 @@ export default function Index(){
       <TouchableOpacity style={styles.button} onPress={signUp}>
         <Text style={styles.label}>Criar Conta</Text>
       </TouchableOpacity>
-
-      <Link href="/product/12">Abrir produto</Link>
 
     </View>
   )
