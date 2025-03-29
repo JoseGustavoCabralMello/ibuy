@@ -1,14 +1,16 @@
 import { View, StyleSheet, TouchableOpacity, Text} from "react-native"
-import { Link } from 'expo-router'
+import { router } from 'expo-router'
 
 export default function Index(){
+  function signUp() {
+    router.navigate('/sign-up')
+  }
+
   return(
     <View style={styles.constainer}>
-      <Link href="/sign-up" asChild >
-        <TouchableOpacity style={styles.button}>
-           <Text style={styles.label}>Criar Conta</Text>
-         </TouchableOpacity>
-       </Link>
+      <TouchableOpacity style={styles.button} onPress={signUp}>
+          <Text style={styles.label}>Criar Conta</Text>
+        </TouchableOpacity>
     </View>
   )
 }
