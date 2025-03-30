@@ -1,5 +1,5 @@
-import { View, StyleSheet, TouchableOpacity, Text} from "react-native"
 import { router } from 'expo-router'
+import { View, StyleSheet, TouchableOpacity, Text} from "react-native"
 
 export default function Index(){
   function signUp() {
@@ -7,7 +7,7 @@ export default function Index(){
   }
 
   function signIn() {
-    router.navigate('/(drawer)/configs')
+    router.navigate('/(drawer)')
   }
 
   return(
